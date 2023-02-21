@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      background-color: #E7EFF5;
+      font-family: 'Karla', sans-serif;
+
+    }
+
+    h1 {
+      color: #6ABBBB;
+    }
+
+    h2 {
+      color: white;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .one {
+      grid-area: one;
+      background-color: white;
+      text-align: left;
+      padding: 10px 40px 10px 50px;
+
+    }
+
+    #green-title {
+      color: #C6DD55;
+    }
+
+    .one p {
+      color: #B3B7C3;
+
+    }
+
+    .two {
+      grid-area: two;
+      background-color: #58B0B0;
+      padding-left: 40px;
+      padding-top: 20px;
+      padding-bottom: 50px;
+      line-height: 1;
+
+    }
+
+    .two p {
+      color: white;
+    }
+
+    #month {
+      font-size: 16px;
+      color: #bae6e9;
+    }
+
+    .btn {
+      -webkit-border-radius: 4;
+      -moz-border-radius: 4;
+      border-radius: 4px;
+  
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 16px;
+      background: #C6DD55;
+      padding: 20px 90px 20px 90px;
+      text-decoration: none;
+      line-height: 3;
+    }
+
+    .btn:hover {
+      background: #b2c74c;
+      text-decoration: none;
+    }
+
+    .three {
+      grid-area: three;
+      background-color: #6ABBBC;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .three ul {
+      color: #bae6e9;
+      line-height: 1.4;
+
+    }
+
+    .container {
+      max-width: 660px;
+      margin: 100px auto 100px auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-auto-columns: 1fr;
+      gap: 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "one one"
+        "two three";
+    }
+
+    @media screen and (max-width:700px) {
+
+
+      .container {
+
+        max-width: 375px;
+        margin: 100px auto 100px auto;
+        display: grid;
+        grid-template-columns: 375px;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "one"
+          "two"
+          "three";
+      }
+
+
+      .one {
+        grid-area: one;
+        background-color: white;
+        
+
+      }
+      .one h1 {
+        font-size: 20px;
+        padding-top:3px;
+      }
+      .one h2 {
+        font-size: 15px;
+      }
+      .one p {
+        line-height: 1.7;
+        width: 300px;
+        font-size: 15px;
+      }
+      .two {
+        grid-area: two;
+        background-color: #6ABBBB;
+        padding-left: 50px;
+        padding-bottom: 0px;
+
+      }
+      .btn {
+        padding: 10px 105px 10px 105px;
+        
+      }
+
+
+      .three {
+        grid-area: three;
+        background-color: #84D3D7;
+        padding-left: 10px;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="one flex-container">
+      <h1>Join our Community</h1>
+      <h2 id="green-title">30-day, hassle-free money back guarantee</h2>
+      <p>Gain access to out full library of tutorials along with expert code reviews
+        Perfect fo any developers who are serious about honing their skills
+      </p>
+    </div>
+
+    <div class="two">
+      <h2>Monthly Subscription</h2>
+      <p style="font-size: 30px;">$29 <span id="month">per month</span></p>
+      <p>Full access for less than $1 a day</p>
+      <a class="btn" target="_blank" href="https://www.frontendmentor.io/slack">Sign Up</a>
+    </div>
+
+    <div class="three">
+      <ul style="list-style-type:none;">
+        <h2>Why Us</h2>
+        <li>Tutorials by industry experts</li>
+        <li>Peer & expert coded review</li>
+        <li>Coding exercises</li>
+        <li>Access to our GitHub repos</li>
+        <li>Community forum</li>
+        <li>Flashcard desks</li>
+        <li>New videos every week</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <footer>
+    <p class="attribution" align="center">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Michael</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
