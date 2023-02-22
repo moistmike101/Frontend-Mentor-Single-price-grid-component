@@ -22,6 +22,8 @@
 
     h1 {
       color: #6ABBBB;
+      font-weight: 700;
+      font-size: 24px;
     }
 
     h2 {
@@ -37,7 +39,7 @@
       grid-area: one;
       background-color: white;
       text-align: left;
-      padding: 10px 40px 10px 50px;
+      padding: 20px 40px 20px 50px;
 
     }
 
@@ -47,13 +49,15 @@
 
     .one p {
       color: #B3B7C3;
+      width: 550px;
+      
 
     }
 
     .two {
       grid-area: two;
       background-color: #58B0B0;
-      padding-left: 40px;
+      padding-left: 50px;
       padding-top: 20px;
       padding-bottom: 50px;
       line-height: 1;
@@ -93,6 +97,7 @@
       background-color: #6ABBBC;
       padding-top: 20px;
       padding-bottom: 20px;
+      padding-left: 10px;
     }
 
     .three ul {
@@ -100,9 +105,13 @@
       line-height: 1.4;
 
     }
+    .three h2 {
+      padding-left: 40px;
+    }
 
     .container {
-      max-width: 660px;
+      max-width: 680px;
+      height: 470px;
       margin: 100px auto 100px auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -114,6 +123,10 @@
         "one one"
         "two three";
     }
+    .attribution{
+      text-align: center;
+      margin-top: 150px;
+    }
 
     @media screen and (max-width:700px) {
 
@@ -121,10 +134,10 @@
       .container {
 
         max-width: 375px;
-        margin: 100px auto 100px auto;
+        margin: 30px auto 100px auto;
         display: grid;
         grid-template-columns: 375px;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 260px);
         gap: 0px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -171,6 +184,10 @@
         padding-left: 10px;
 
       }
+      .attribution{
+      text-align: center;
+      margin-top: 350px;
+    }
     }
   </style>
 </head>
@@ -193,8 +210,8 @@
     </div>
 
     <div class="three">
+      <h2>Why Us</h2>
       <ul style="list-style-type:none;">
-        <h2>Why Us</h2>
         <li>Tutorials by industry experts</li>
         <li>Peer & expert coded review</li>
         <li>Coding exercises</li>
@@ -210,7 +227,7 @@
 
 
   <footer>
-    <p class="attribution" align="center">
+    <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Michael</a>.
     </p>
